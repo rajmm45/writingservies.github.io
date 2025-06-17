@@ -1,6 +1,29 @@
-body{
-  padding: 25px;
+/* Custom animation */
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
-.title {
-	color: #5C6AC4;
+.animate-slide-in-left {
+  animation: slide-in-left 1s ease-out;
+}
+
+/* Reusable button class */
+.btn-primary {
+  @apply bg-indigo-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-indigo-700 transition;
+}
+
+/* Input styling */
+.form-input {
+  @apply w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-300;
+}
+
+/* Service card hover effect */
+.service-card {
+  @apply bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300;
 }
